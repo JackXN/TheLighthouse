@@ -42,7 +42,11 @@ Vector2 movement;
                     success = TryMove(new Vector2(0, movement.y));
                 }
             }
+            animator.SetBool("isMoving", success);
+        }else {
+            animator.SetBool("isMoving", false);
         }
+
     }
     void MovementInput() {
         float mx = Input.GetAxisRaw("Horizontal");
