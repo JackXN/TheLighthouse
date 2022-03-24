@@ -18,4 +18,12 @@ private void FixedUpdate() {
 }
 
 
+void MovementInput() {
+    float mx = Input.GetAxisRaw("Horizontal");
+    float my = Input.GetAxisRaw("Vertical");
+
+    movement = new Vector2(mx, my).normalized;
+}
+
+
 }
