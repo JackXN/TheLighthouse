@@ -9,4 +9,13 @@ public Rigidbody2D rb;
 
 Vector2 movement;
 
+void Update() {
+    MovementInput();
+}
+
+private void FixedUpdate() {
+    rb.velocity = movement * moveSpeed;
+}
+
+
 }
